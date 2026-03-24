@@ -123,6 +123,22 @@ footer{padding:40px;text-align:center;border-top:1px solid var(--border);color:v
 
 @media(max-width:900px){.bento{grid-template-columns:repeat(2,1fr)}.s2,.s3{grid-column:span 2}nav{padding:16px 20px}.nav-links{gap:16px}.container{padding:0 20px}.about-grid,.career-grid{grid-template-columns:1fr}.edu-grid{grid-template-columns:1fr}}
 @media(max-width:600px){.bento{grid-template-columns:1fr}.s2,.s3{grid-column:span 1}.nav-links a:not(.nav-cta){display:none}.hero-t{font-size:2.8rem}.chat-panel{width:calc(100vw - 40px);right:20px}.arch-flow{min-width:unset;flex-direction:column}.arch-arr{transform:rotate(90deg)}}
+
+/* BCS Sprint Tracker */
+.bop-sprints{display:flex;flex-direction:column;gap:10px;margin-top:40px}
+.bop-sprint-card{background:var(--bg-surface);border:1px solid var(--border);border-left:3px solid transparent;border-radius:var(--r);padding:22px 28px;box-shadow:var(--neu);transition:border-color var(--t),transform var(--t)}
+.bop-sprint-card:hover{border-color:var(--border-h);transform:translateX(4px)}
+.bop-sprint-card.sprint-done{border-left-color:var(--accent)}
+.bop-sprint-card.sprint-upcoming{opacity:.65}
+.sprint-meta{display:flex;align-items:center;gap:14px;margin-bottom:10px;flex-wrap:wrap}
+.sprint-num{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--text-3);letter-spacing:.1em;background:var(--bg-elevated);padding:3px 10px;border-radius:100px;border:1px solid var(--border);flex-shrink:0}
+.sprint-case-tag{font-size:.78rem;font-weight:500}
+.sprint-focus-label{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--text-3);text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}
+.sprint-deliverable-name{font-size:.95rem;font-weight:500;color:var(--text-1)}
+.sprint-foot{display:flex;align-items:center;gap:14px;margin-top:16px;flex-wrap:wrap}
+.bop-done{background:rgba(110,231,183,.1);color:var(--accent);border:1px solid rgba(110,231,183,.2);padding:4px 12px;border-radius:100px;font-size:.72rem;font-weight:500}
+.bop-upcoming{background:rgba(107,114,128,.08);color:var(--text-3);border:1px solid var(--border);padding:4px 12px;border-radius:100px;font-size:.72rem}
+.bop-frame{width:100%;height:620px;border:none;border-radius:var(--rs);margin-top:8px;background:var(--bg-deep)}
 </style>
 </head>
 <body>
@@ -255,26 +271,59 @@ footer{padding:40px;text-align:center;border-top:1px solid var(--border);color:v
   </div>
 
   <!-- BCS BODY OF PROOF -->
-  <div class="rv" style="margin-top:80px"><div class="slbl">Body of Proof — BCS BA Portfolio</div><h3 class="stitle" style="font-size:clamp(1.6rem,3vw,2.5rem)">Guided Learning Case Studies</h3><p class="sdesc">Structured business analysis deliverables across three fictional case study sectors. Documents embedded below as they are completed.</p></div>
-  <div class="bop-grid">
-    <div class="bop-card rv">
-      <div class="bop-hd"><div class="bop-sector" style="color:var(--accent)">HealthTech</div><div class="bop-title">MediCore AI</div><div class="bop-desc">AI-powered healthcare platform case study. Strategic analysis, requirements engineering, and process modelling.</div></div>
-      <div class="bop-tech"><span class="tag">PESTLE</span><span class="tag">MOST</span><span class="tag">Stakeholder Analysis</span><span class="tag">Requirements Engineering</span><span class="tag">Process Modelling</span></div>
-      <div class="bop-ft"><button class="bop-act" onclick="toggleBOP(this)">▸ View Document</button><span class="bop-badge bop-pend">Uploading soon</span></div>
-      <div class="bop-viewer"><div class="bop-ph">PDF will be embedded here once uploaded to <code>/docs/medicore-ai.pdf</code></div></div>
+  <div class="rv" style="margin-top:80px"><div class="slbl">Body of Proof — BCS BA Foundation Certificate</div><h3 class="stitle" style="font-size:clamp(1.6rem,3vw,2.5rem)">6-Sprint Competency Portfolio</h3><p class="sdesc">Structured BA deliverables across three fictional case studies — MediCore AI (HealthTech), NovaPay (FinTech), and Meridian Consulting (Professional Services). Each sprint produces one formal technique deliverable, building progressive mastery across the full BCS Foundation syllabus.</p></div>
+  <div class="bop-sprints">
+
+    <div class="bop-sprint-card sprint-done rv">
+      <div class="sprint-meta"><span class="sprint-num">Sprint 01</span><span class="sprint-case-tag" style="color:var(--accent)">MediCore AI · HealthTech</span></div>
+      <div class="sprint-focus-label">The BA Role</div>
+      <div class="sprint-deliverable-name">T-Shaped Professional Audit &amp; 6 BA Principles Application</div>
+      <div class="sprint-foot">
+        <button class="bop-act" onclick="toggleBOP(this)">▸ View Document</button>
+        <span class="bop-badge bop-done">✓ Complete</span>
+      </div>
+      <div class="bop-viewer"><iframe src="/docs/EC_BCS_BA_Week1_2.pdf" class="bop-frame" title="Sprint 01 — T-Shaped Audit"></iframe></div>
     </div>
-    <div class="bop-card rv">
-      <div class="bop-hd"><div class="bop-sector" style="color:var(--blue)">FinTech</div><div class="bop-title">NovaPay</div><div class="bop-desc">Digital payment platform case study. Business case development, financial modelling, and change management.</div></div>
-      <div class="bop-tech"><span class="tag">Business Case</span><span class="tag">Gap Analysis</span><span class="tag">MoSCoW</span><span class="tag">Benefits Mapping</span></div>
-      <div class="bop-ft"><button class="bop-act" onclick="toggleBOP(this)">▸ View Document</button><span class="bop-badge bop-pend">Uploading soon</span></div>
-      <div class="bop-viewer"><div class="bop-ph">PDF will be embedded here once uploaded to <code>/docs/novapay.pdf</code></div></div>
+
+    <div class="bop-sprint-card sprint-done rv">
+      <div class="sprint-meta"><span class="sprint-num">Sprint 02</span><span class="sprint-case-tag" style="color:var(--accent)">MediCore AI · HealthTech</span></div>
+      <div class="sprint-focus-label">Strategy Analysis</div>
+      <div class="sprint-deliverable-name">PESTLE, VMOST &amp; SWOT — Strategic Analysis Report</div>
+      <div class="sprint-foot">
+        <button class="bop-act" onclick="toggleBOP(this)">▸ View Document</button>
+        <span class="bop-badge bop-done">✓ Complete</span>
+      </div>
+      <div class="bop-viewer"><iframe src="/docs/EC_BCS_BA_Week2_PESTLE_VMOST_SWOT.pdf" class="bop-frame" title="Sprint 02 — Strategy Analysis"></iframe></div>
     </div>
-    <div class="bop-card rv">
-      <div class="bop-hd"><div class="bop-sector" style="color:var(--purple)">Professional Services</div><div class="bop-title">Meridian Consulting</div><div class="bop-desc">Consultancy operations case study. Organisational analysis, service improvement, and delivery model redesign.</div></div>
-      <div class="bop-tech"><span class="tag">SWOT</span><span class="tag">RACI</span><span class="tag">As-Is / To-Be Mapping</span><span class="tag">User Stories</span></div>
-      <div class="bop-ft"><button class="bop-act" onclick="toggleBOP(this)">▸ View Document</button><span class="bop-badge bop-pend">Uploading soon</span></div>
-      <div class="bop-viewer"><div class="bop-ph">PDF will be embedded here once uploaded to <code>/docs/meridian-consulting.pdf</code></div></div>
+
+    <div class="bop-sprint-card sprint-upcoming rv">
+      <div class="sprint-meta"><span class="sprint-num">Sprint 03</span><span class="sprint-case-tag" style="color:var(--blue)">NovaPay · FinTech</span></div>
+      <div class="sprint-focus-label">Investigation Techniques</div>
+      <div class="sprint-deliverable-name">Stakeholder Wheel, Power/Interest Grid &amp; RACI Chart</div>
+      <div class="sprint-foot"><span class="bop-badge bop-upcoming">Upcoming</span></div>
     </div>
+
+    <div class="bop-sprint-card sprint-upcoming rv">
+      <div class="sprint-meta"><span class="sprint-num">Sprint 04</span><span class="sprint-case-tag" style="color:var(--blue)">NovaPay · FinTech</span></div>
+      <div class="sprint-focus-label">Process &amp; Gap Analysis</div>
+      <div class="sprint-deliverable-name">As-Is Swimlane Diagram &amp; POPIT Gap Analysis</div>
+      <div class="sprint-foot"><span class="bop-badge bop-upcoming">Upcoming</span></div>
+    </div>
+
+    <div class="bop-sprint-card sprint-upcoming rv">
+      <div class="sprint-meta"><span class="sprint-num">Sprint 05</span><span class="sprint-case-tag" style="color:var(--purple)">Meridian Consulting · Professional Services</span></div>
+      <div class="sprint-focus-label">Business Case Development</div>
+      <div class="sprint-deliverable-name">CARDI Log &amp; Investment Appraisal</div>
+      <div class="sprint-foot"><span class="bop-badge bop-upcoming">Upcoming</span></div>
+    </div>
+
+    <div class="bop-sprint-card sprint-upcoming rv">
+      <div class="sprint-meta"><span class="sprint-num">Sprint 06</span><span class="sprint-case-tag" style="color:var(--purple)">Meridian Consulting · Professional Services</span></div>
+      <div class="sprint-focus-label">Requirements Engineering</div>
+      <div class="sprint-deliverable-name">Requirements Catalogue &amp; MoSCoW Prioritisation</div>
+      <div class="sprint-foot"><span class="bop-badge bop-upcoming">Upcoming</span></div>
+    </div>
+
   </div>
 
   <!-- PRINCE2 Agile -->
