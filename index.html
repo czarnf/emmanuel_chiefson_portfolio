@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Emmanuel Chiefson — AI Strategy · Cloud Architecture · Digital Transformation</title>
+<meta name="description" content="π-shaped strategist bridging healthcare operations, cloud architecture, and AI-powered digital transformation. MSc IT, BSc Project Management, AWS/Azure/Oracle certified.">
+<meta property="og:title" content="Emmanuel Chiefson — Portfolio">
+<meta property="og:description" content="Technical Project & Platform Transformation Lead. Bridging cloud infrastructure with AI-powered product strategy.">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg-deep:#0a0a0f;--bg-surface:#12121a;--bg-elevated:#1a1a26;--accent:#6ee7b7;--accent-dim:#34d399;--blue:#60a5fa;--purple:#a78bfa;--amber:#fbbf24;--rose:#fb7185;--text-1:#e8e8f0;--text-2:#9ca3af;--text-3:#6b7280;--border:rgba(255,255,255,0.06);--border-h:rgba(255,255,255,0.12);--neu:6px 6px 16px rgba(0,0,0,0.5),-4px -4px 12px rgba(255,255,255,0.03);--glow:0 0 40px rgba(110,231,183,0.08);--r:20px;--rs:12px;--t:0.35s cubic-bezier(0.25,0.46,0.45,0.94)}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth;scrollbar-width:thin;scrollbar-color:var(--bg-elevated) var(--bg-deep)}body{font-family:'DM Sans',sans-serif;background:var(--bg-deep);color:var(--text-1);overflow-x:hidden;line-height:1.6}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");pointer-events:none;z-index:9999}
+.amb{position:fixed;border-radius:50%;filter:blur(120px);pointer-events:none;z-index:0;opacity:.4}.a1{width:600px;height:600px;background:rgba(110,231,183,.06);top:-200px;right:-100px}.a2{width:500px;height:500px;background:rgba(96,165,250,.05);bottom:20%;left:-150px}.a3{width:400px;height:400px;background:rgba(167,139,250,.04);top:50%;right:-100px}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;background:rgba(10,10,15,.75);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:'Instrument Serif',serif;font-size:1.4rem;color:var(--accent);letter-spacing:-.02em}
+.nav-links{display:flex;gap:28px;align-items:center}.nav-links a{color:var(--text-2);text-decoration:none;font-size:.82rem;font-weight:500;letter-spacing:.04em;text-transform:uppercase;transition:color var(--t);position:relative}.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1.5px;background:var(--accent);transition:width var(--t)}.nav-links a:hover{color:var(--accent)}.nav-links a:hover::after{width:100%}
+.nav-cta{background:var(--accent)!important;color:var(--bg-deep)!important;padding:10px 24px;border-radius:100px;font-weight:700!important;font-size:.78rem!important;letter-spacing:.06em!important;transition:transform var(--t),box-shadow var(--t)!important}.nav-cta::after{display:none!important}.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(110,231,183,.25)}
+.container{max-width:1280px;margin:0 auto;padding:0 40px;position:relative;z-index:1}.section{padding:120px 0}
+
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding-top:100px}
+.hero-ey{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--accent);letter-spacing:.15em;text-transform:uppercase;margin-bottom:24px;opacity:0;animation:fsu .8s .3s forwards}
+.hero-ey span{display:inline-block;width:8px;height:8px;background:var(--accent);border-radius:50%;margin-right:12px;vertical-align:middle;animation:pd 2s infinite}
+@keyframes pd{0%,100%{opacity:1;box-shadow:0 0 0 0 rgba(110,231,183,.5)}50%{opacity:.7;box-shadow:0 0 0 6px rgba(110,231,183,0)}}
+.hero-t{font-family:'Instrument Serif',serif;font-size:clamp(2.8rem,6.5vw,6rem);line-height:1.02;letter-spacing:-.03em;margin-bottom:32px;opacity:0;animation:fsu .8s .5s forwards}
+.hl{color:var(--accent);position:relative;display:inline-block}.hl::after{content:'';position:absolute;bottom:4px;left:0;right:0;height:6px;background:rgba(110,231,183,.2);border-radius:3px}
+.hero-sub{font-size:1.15rem;color:var(--text-2);max-width:640px;line-height:1.7;margin-bottom:48px;opacity:0;animation:fsu .8s .7s forwards}
+.hero-act{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:fsu .8s .9s forwards}
+.btn-p{background:var(--accent);color:var(--bg-deep);padding:14px 36px;border-radius:100px;text-decoration:none;font-weight:700;font-size:.9rem;letter-spacing:.04em;transition:transform var(--t),box-shadow var(--t);border:none;cursor:pointer;display:inline-block}.btn-p:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(110,231,183,.3)}
+.btn-s{background:transparent;color:var(--text-1);padding:14px 36px;border-radius:100px;text-decoration:none;font-weight:500;font-size:.9rem;border:1px solid var(--border-h);transition:all var(--t);cursor:pointer;display:inline-block}.btn-s:hover{border-color:var(--accent);color:var(--accent)}
+.scroll-i{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--text-3);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;animation:bd 2s infinite}.scroll-l{width:1px;height:40px;background:linear-gradient(to bottom,var(--text-3),transparent)}
+@keyframes bd{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(8px)}}
+@keyframes fsu{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+
+.slbl{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--accent);letter-spacing:.2em;text-transform:uppercase;margin-bottom:16px}
+.stitle{font-family:'Instrument Serif',serif;font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.02em;margin-bottom:16px}
+.sdesc{color:var(--text-2);max-width:560px;margin-bottom:60px;font-size:1.05rem;line-height:1.7}
+
+.bento{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(180px,auto);gap:16px}
+.bc{background:var(--bg-surface);border-radius:var(--r);border:1px solid var(--border);padding:32px;position:relative;overflow:hidden;transition:all var(--t);box-shadow:var(--neu);display:flex;flex-direction:column;justify-content:space-between}.bc:hover{border-color:var(--border-h);transform:translateY(-4px);box-shadow:var(--neu),var(--glow)}
+.s2{grid-column:span 2}.s3{grid-column:span 3}
+.bi{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:20px;box-shadow:var(--neu)}
+.bi.g{background:rgba(110,231,183,.12);color:var(--accent)}.bi.b{background:rgba(96,165,250,.12);color:var(--blue)}.bi.p{background:rgba(167,139,250,.12);color:var(--purple)}.bi.a{background:rgba(251,191,36,.12);color:var(--amber)}.bi.r{background:rgba(251,113,133,.12);color:var(--rose)}
+.bt{font-family:'Instrument Serif',serif;font-size:1.35rem;margin-bottom:8px;letter-spacing:-.01em}
+.bd{color:var(--text-2);font-size:.9rem;line-height:1.6}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}.tag{font-family:'JetBrains Mono',monospace;font-size:.65rem;padding:4px 10px;border-radius:100px;background:var(--bg-elevated);color:var(--text-2);border:1px solid var(--border);letter-spacing:.03em}
+.bstat{font-family:'Instrument Serif',serif;font-size:3.5rem;color:var(--accent);line-height:1;letter-spacing:-.03em}.bstat-l{color:var(--text-2);font-size:.85rem;margin-top:8px}
+
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}.about-text{font-size:1rem;line-height:1.8;color:var(--text-2)}.about-text strong{color:var(--text-1)}
+.pillar-cards{display:flex;flex-direction:column;gap:16px}.pillar{background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--r);padding:24px;box-shadow:var(--neu);transition:all var(--t)}.pillar:hover{border-color:var(--border-h);transform:translateX(4px)}.pillar-label{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}.pillar-title{font-family:'Instrument Serif',serif;font-size:1.15rem;margin-bottom:6px}
+
+.timeline{position:relative;padding-left:60px}.timeline::before{content:'';position:absolute;left:20px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--accent),var(--bg-elevated),var(--blue))}
+.ti{position:relative;margin-bottom:60px;opacity:0;transform:translateY(40px);transition:all .6s cubic-bezier(.25,.46,.45,.94)}.ti.visible{opacity:1;transform:translateY(0)}
+.td{position:absolute;left:-48px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--bg-deep);border:3px solid var(--accent);z-index:2;transition:all var(--t)}.ti.visible .td{background:var(--accent);box-shadow:0 0 20px rgba(110,231,183,.4)}
+.tph{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--accent);letter-spacing:.15em;text-transform:uppercase;margin-bottom:8px}
+.tt{font-family:'Instrument Serif',serif;font-size:1.6rem;margin-bottom:12px;letter-spacing:-.01em}
+.tde{color:var(--text-2);font-size:.95rem;line-height:1.7;max-width:600px}
+.tr{margin-top:16px;padding:16px 20px;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--rs);box-shadow:var(--neu)}.trl{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--amber);letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px}
+
+.career-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.career-card{background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--r);padding:28px;box-shadow:var(--neu);transition:all var(--t)}.career-card:hover{border-color:var(--border-h);transform:translateY(-3px)}
+.career-role{font-family:'Instrument Serif',serif;font-size:1.2rem;margin-bottom:4px}.career-org{color:var(--accent);font-size:.85rem;font-weight:500;margin-bottom:4px}.career-date{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--text-3);letter-spacing:.08em;margin-bottom:12px}.career-desc{color:var(--text-2);font-size:.88rem;line-height:1.6}
+
+.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.edu-card{background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--r);padding:28px;box-shadow:var(--neu);transition:all var(--t)}.edu-card:hover{border-color:var(--border-h);transform:translateY(-3px)}
+.edu-deg{font-family:'Instrument Serif',serif;font-size:1.2rem;margin-bottom:4px}.edu-inst{color:var(--accent);font-size:.85rem;font-weight:500;margin-bottom:4px}.edu-yr{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--text-3);letter-spacing:.08em;margin-bottom:12px}.edu-fo{color:var(--text-2);font-size:.85rem;line-height:1.6}
+
+.certs-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.cert{background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--rs);padding:20px;display:flex;align-items:center;gap:16px;box-shadow:var(--neu);transition:all var(--t)}.cert:hover{border-color:var(--border-h);transform:translateY(-2px)}
+.cert-icon{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.cert-name{font-size:.88rem;font-weight:500}.cert-st{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.06em;margin-top:2px}
+.st-done{color:var(--accent)}.st-prog{color:var(--amber)}.st-plan{color:var(--text-3)}
+
+.bop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(360px,1fr));gap:20px}
+.bop-card{background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;box-shadow:var(--neu);transition:all var(--t)}.bop-card:hover{border-color:var(--border-h);transform:translateY(-3px)}
+.bop-hd{padding:24px 28px;border-bottom:1px solid var(--border)}.bop-sector{font-family:'JetBrains Mono',monospace;font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}.bop-title{font-family:'Instrument Serif',serif;font-size:1.2rem;margin-bottom:8px}.bop-desc{color:var(--text-2);font-size:.85rem;line-height:1.6}
+.bop-tech{padding:16px 28px;display:flex;flex-wrap:wrap;gap:6px;border-bottom:1px solid var(--border)}
+.bop-ft{padding:16px 28px;display:flex;align-items:center;justify-content:space-between}
+.bop-act{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--accent);cursor:pointer;border:none;background:none;letter-spacing:.04em;transition:color var(--t)}.bop-act:hover{color:var(--text-1)}
+.bop-badge{font-family:'JetBrains Mono',monospace;font-size:.6rem;padding:4px 10px;border-radius:100px;letter-spacing:.06em;text-transform:uppercase}
+.bop-done{background:rgba(110,231,183,.12);color:var(--accent);border:1px solid rgba(110,231,183,.25)}.bop-pend{background:rgba(251,191,36,.12);color:var(--amber);border:1px solid rgba(251,191,36,.25)}
+.bop-viewer{display:none;border-top:1px solid var(--border)}.bop-viewer.open{display:block}.bop-viewer iframe{width:100%;height:500px;border:none;background:var(--bg-elevated)}.bop-ph{padding:40px;text-align:center;color:var(--text-3);font-size:.85rem}
+
+.pg-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px}
+.pg-card{background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;transition:all var(--t);box-shadow:var(--neu)}.pg-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:var(--neu),var(--glow)}
+.pg-prev{height:200px;background:var(--bg-elevated);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.pg-badge{position:absolute;top:16px;right:16px;font-family:'JetBrains Mono',monospace;font-size:.6rem;padding:4px 12px;border-radius:100px;letter-spacing:.08em;text-transform:uppercase;z-index:2}
+.badge-live{background:rgba(110,231,183,.15);color:var(--accent);border:1px solid rgba(110,231,183,.3)}.badge-demo{background:rgba(96,165,250,.15);color:var(--blue);border:1px solid rgba(96,165,250,.3)}.badge-wip{background:rgba(251,191,36,.15);color:var(--amber);border:1px solid rgba(251,191,36,.3)}
+.pg-con{padding:28px}.pg-ti{font-family:'Instrument Serif',serif;font-size:1.3rem;margin-bottom:8px}.pg-de{color:var(--text-2);font-size:.88rem;line-height:1.6;margin-bottom:16px}
+.code-rain{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:rgba(110,231,183,.15);line-height:1.2;white-space:pre;position:absolute;top:0;animation:cr 15s linear infinite}@keyframes cr{0%{transform:translateY(0)}100%{transform:translateY(-50%)}}
+
+.writing-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px}
+.wc{background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--r);padding:28px;box-shadow:var(--neu);transition:all var(--t)}.wc:hover{border-color:var(--border-h);transform:translateY(-3px)}
+.wplat{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--blue);letter-spacing:.1em;text-transform:uppercase;margin-bottom:12px}
+.wti{font-family:'Instrument Serif',serif;font-size:1.15rem;margin-bottom:8px}.wex{color:var(--text-2);font-size:.85rem;line-height:1.6;margin-bottom:16px}
+.wlink{color:var(--accent);font-size:.8rem;text-decoration:none;font-weight:500;transition:color var(--t)}.wlink:hover{color:var(--text-1)}
+
+.arch{background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--r);padding:48px;box-shadow:var(--neu);overflow-x:auto}
+.arch-flow{display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;min-width:700px}
+.arch-node{padding:18px 28px;border-radius:var(--rs);font-family:'JetBrains Mono',monospace;font-size:.75rem;letter-spacing:.04em;text-align:center;border:1px solid var(--border);box-shadow:var(--neu);min-width:130px;transition:all var(--t)}.arch-node:hover{transform:scale(1.05)}
+.an-g{background:rgba(110,231,183,.08);color:var(--accent);border-color:rgba(110,231,183,.2)}.an-b{background:rgba(96,165,250,.08);color:var(--blue);border-color:rgba(96,165,250,.2)}.an-p{background:rgba(167,139,250,.08);color:var(--purple);border-color:rgba(167,139,250,.2)}.an-a{background:rgba(251,191,36,.08);color:var(--amber);border-color:rgba(251,191,36,.2)}
+.arch-arr{color:var(--text-3);font-size:1.2rem;flex-shrink:0}.arch-lbl{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--text-3);text-align:center;margin-top:4px;letter-spacing:.08em}
+
+.cta{text-align:center;padding:140px 0}.cta-title{font-family:'Instrument Serif',serif;font-size:clamp(2.5rem,5vw,4.5rem);letter-spacing:-.03em;margin-bottom:20px}.cta-desc{color:var(--text-2);font-size:1.1rem;margin-bottom:48px;max-width:500px;margin-left:auto;margin-right:auto;line-height:1.7}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.social{display:flex;gap:20px;justify-content:center;margin-top:48px}.social a{color:var(--text-3);text-decoration:none;font-size:.8rem;font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:color var(--t);padding:8px 16px;border:1px solid var(--border);border-radius:100px}.social a:hover{color:var(--accent);border-color:var(--accent)}
+footer{padding:40px;text-align:center;border-top:1px solid var(--border);color:var(--text-3);font-size:.8rem}
+
+.chat-toggle{position:fixed;bottom:28px;right:28px;width:60px;height:60px;border-radius:50%;background:var(--accent);color:var(--bg-deep);border:none;cursor:pointer;font-size:1.5rem;box-shadow:0 8px 30px rgba(110,231,183,.3);z-index:200;transition:all var(--t);display:flex;align-items:center;justify-content:center}.chat-toggle:hover{transform:scale(1.1)}
+.chat-panel{position:fixed;bottom:100px;right:28px;width:380px;max-height:520px;background:var(--bg-surface);border:1px solid var(--border);border-radius:var(--r);box-shadow:0 24px 80px rgba(0,0,0,.5);z-index:200;display:none;flex-direction:column;overflow:hidden}.chat-panel.open{display:flex}
+.chat-hd{padding:20px 24px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px}.chat-dot{width:10px;height:10px;background:var(--accent);border-radius:50%;animation:pd 2s infinite}
+.chat-ht{font-family:'Instrument Serif',serif;font-size:1.1rem}.chat-hs{font-size:.75rem;color:var(--text-3);margin-top:2px}
+.chat-msgs{flex:1;overflow-y:auto;padding:20px;display:flex;flex-direction:column;gap:12px;max-height:340px}
+.chat-msg{padding:12px 16px;border-radius:14px;font-size:.88rem;line-height:1.5;max-width:85%}.chat-msg.bot{background:var(--bg-elevated);border:1px solid var(--border);align-self:flex-start}.chat-msg.user{background:var(--accent);color:var(--bg-deep);align-self:flex-end;font-weight:500}
+.chat-sug{padding:0 20px 16px;display:flex;flex-wrap:wrap;gap:6px}.chat-sug button{font-size:.75rem;padding:6px 14px;border-radius:100px;background:var(--bg-elevated);color:var(--text-2);border:1px solid var(--border);cursor:pointer;transition:all var(--t);font-family:'DM Sans',sans-serif}.chat-sug button:hover{border-color:var(--accent);color:var(--accent)}
+.chat-ir{padding:16px 20px;border-top:1px solid var(--border);display:flex;gap:8px}.chat-in{flex:1;background:var(--bg-elevated);border:1px solid var(--border);border-radius:100px;padding:10px 18px;color:var(--text-1);font-size:.85rem;font-family:'DM Sans',sans-serif;outline:none;transition:border-color var(--t)}.chat-in:focus{border-color:var(--accent)}.chat-in::placeholder{color:var(--text-3)}
+.chat-send{background:var(--accent);color:var(--bg-deep);border:none;border-radius:50%;width:40px;height:40px;cursor:pointer;font-size:1rem;transition:transform var(--t);flex-shrink:0}.chat-send:hover{transform:scale(1.1)}
+
+.rv{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}.rv.visible{opacity:1;transform:translateY(0)}
+.kw{display:inline-block;transition:transform .2s ease,color .2s ease;cursor:default}.kw:hover{transform:translateY(-6px) rotate(-1deg);color:var(--accent)}
+
+@media(max-width:900px){.bento{grid-template-columns:repeat(2,1fr)}.s2,.s3{grid-column:span 2}nav{padding:16px 20px}.nav-links{gap:16px}.container{padding:0 20px}.about-grid,.career-grid{grid-template-columns:1fr}.edu-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.bento{grid-template-columns:1fr}.s2,.s3{grid-column:span 1}.nav-links a:not(.nav-cta){display:none}.hero-t{font-size:2.8rem}.chat-panel{width:calc(100vw - 40px);right:20px}.arch-flow{min-width:unset;flex-direction:column}.arch-arr{transform:rotate(90deg)}}
+</style>
+</head>
+<body>
+<div class="amb a1"></div><div class="amb a2"></div><div class="amb a3"></div>
+
+<nav>
+  <div class="nav-logo">E. Chiefson</div>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#credentials">Credentials</a>
+    <a href="#writing">Writing</a>
+    <a href="#contact" class="nav-cta">Let's Talk</a>
+  </div>
+</nav>
+
+<section class="hero container">
+  <div class="hero-ey"><span></span> Open to opportunities · Bristol, UK</div>
+  <h1 class="hero-t"><span class="kw">Technical</span> <span class="kw">Project</span> <span class="kw">&amp;</span><br><span class="kw hl">Platform</span> <span class="kw hl">Transformation</span><br><span class="kw">Lead.</span></h1>
+  <p class="hero-sub">Bridging the gap between grand stakeholder visions and the cold, hard realities of technical delivery. π-shaped strategist spanning healthcare operations, cloud architecture, and AI-powered digital transformation.</p>
+  <div class="hero-act"><a href="#contact" class="btn-p">Schedule Consultation</a><a href="#" class="btn-s">Download CV</a></div>
+  <div class="scroll-i">Scroll<div class="scroll-l"></div></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section container">
+  <div class="rv"><div class="slbl">01 / About</div><h2 class="stitle">The Architectural Advantage</h2></div>
+  <div class="about-grid">
+    <div class="about-text rv">
+      <p style="margin-bottom:20px">My 10+ years of experience represents a <strong>deliberate evolution in Systems Thinking</strong> — starting from A-grade distinctions in Systems Design, moving through Architectural Technology at Plymouth University, and culminating in an MSc in IT and Agile-led transformation at UWE Bristol.</p>
+      <p style="margin-bottom:20px">This foundation enables me to visualize complex digital infrastructures with the same structural integrity and attention to dependencies as physical ones. I began my healthcare career in 2017 as a Support Worker and have deliberately maintained frontline NHS roles to ground my technical expertise in operational clinical reality.</p>
+      <p>My long-term trajectory is toward <strong>digital transformation, AI strategy, and consulting</strong> — turning complex systems into human-centred outcomes.</p>
+    </div>
+    <div class="pillar-cards rv">
+      <div class="pillar"><div class="pillar-label" style="color:var(--accent)">Pillar 01</div><div class="pillar-title">Technical Build (MSc IT)</div><div class="bd">Deep understanding of application architecture, data systems, and cloud infrastructure (AWS/Azure/Oracle), allowing me to manage engineering teams with realistic, evidence-based expectations.</div></div>
+      <div class="pillar"><div class="pillar-label" style="color:var(--blue)">Pillar 02</div><div class="pillar-title">Structured Governance (BSc PM)</div><div class="bd">Practitioner of Agile, Scrum, and ITIL frameworks to drive operational resilience and predictable delivery.</div></div>
+      <div class="pillar"><div class="pillar-label" style="color:var(--purple)">Pillar 03</div><div class="pillar-title">Commercial Growth</div><div class="bd">Experience as a freelance developer and marketing copywriter ensures technical roadmaps convert into measurable executive ROI and customer engagement.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS BENTO -->
+<section id="skills" class="section container">
+  <div class="rv"><div class="slbl">02 / Capabilities</div><h2 class="stitle">Strategic Technical Pillars</h2><p class="sdesc">A π-shaped profile that deliberately bridges domains — not a generalist, but a specialist who operates at intersections.</p></div>
+  <div class="bento">
+    <div class="bc s2 rv"><div><div class="bi g">◆</div><div class="bt">AI Strategy & Integration</div><div class="bd">Designing AI-powered solutions for healthcare, logistics, and fintech — from predictive patient flow models to AI Computer Vision Agents for automated logistics at Zinter.</div><div class="tags"><span class="tag">LLM Integration</span><span class="tag">Predictive Models</span><span class="tag">AI Governance</span><span class="tag">Computer Vision</span></div></div></div>
+    <div class="bc rv"><div class="bstat">10+</div><div class="bstat-l">Years bridging clinical & technical delivery</div></div>
+    <div class="bc rv"><div class="bstat">π</div><div class="bstat-l">Shaped — deeper than T, wider than I</div></div>
+    <div class="bc rv"><div><div class="bi b">☁</div><div class="bt">Cloud Architecture</div><div class="bd">AWS, Azure & Oracle certified. Infrastructure provisioning, CI/CD pipelines, cloud migration, and Azure-based real-time KYC workflows.</div><div class="tags"><span class="tag">AWS</span><span class="tag">Azure</span><span class="tag">Oracle</span><span class="tag">Docker</span><span class="tag">Terraform</span></div></div></div>
+    <div class="bc s2 rv"><div><div class="bi p">▣</div><div class="bt">Digital Transformation & Project Management</div><div class="bd">Turning ambiguous change programmes into structured delivery — stakeholder alignment, governance frameworks, and measurable outcomes across NHS and private sectors. Led a 5-person cross-functional team at Bayside Consult.</div><div class="tags"><span class="tag">PRINCE2 Agile</span><span class="tag">BCS BA</span><span class="tag">Agile / Scrum</span><span class="tag">ITIL</span><span class="tag">Jira</span></div></div></div>
+    <div class="bc rv"><div><div class="bi a">⚕</div><div class="bt">Healthcare Operations</div><div class="bd">Patient flow coordination at UHBW Southmead with deep frontline insight. Systems thinking meets ward-level reality.</div><div class="tags"><span class="tag">Patient Flow</span><span class="tag">UHBW</span><span class="tag">Data Governance</span></div></div></div>
+    <div class="bc rv"><div class="bstat" style="color:var(--blue)">5</div><div class="bstat-l">Person cross-functional team led at Bayside Consult</div></div>
+    <div class="bc rv"><div class="bstat" style="color:var(--amber)">70%</div><div class="bstat-l">Retention improvement on Zinter platform rebuild</div></div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="section container">
+  <div class="rv"><div class="slbl">03 / Portfolio of Deliveries</div><h2 class="stitle">Career Timeline</h2><p class="sdesc">A deliberate progression from frontline care through technical delivery to AI-powered digital transformation.</p></div>
+  <div class="career-grid">
+    <div class="career-card rv"><div class="career-role">Patient Flow Co-ordinator</div><div class="career-org">University Hospitals Bristol & Weston NHS Trust — Southmead Hospital</div><div class="career-date">2019 – Present · Band 3</div><div class="career-desc">Central information and escalation interface between ward teams, site management, and senior operational leads. Translate live operational data into actionable decision support. Designed clinically compliant tracking tools for equipment visibility and governance compliance.</div></div>
+    <div class="career-card rv"><div class="career-role">IT Project Lead / Digital Transformation</div><div class="career-org">Bayside Consult — Zinter Platform</div><div class="career-date">Jul 2023 – Present</div><div class="career-desc">Lead end-to-end delivery of a digital transformation programme for a European logistics start-up. Coordinating a 5-person cross-functional team. Oversaw AI Computer Vision integration, Azure cloud migration, and real-time KYC workflows.</div></div>
+    <div class="career-card rv"><div class="career-role">Web Developer & Digital Consultant</div><div class="career-org">Freelance</div><div class="career-date">Jan 2019 – Jul 2023</div><div class="career-desc">Designed and delivered user-centred web applications. Supported small businesses with digital strategy, UX optimisation, and feature prioritisation using analytics insights.</div></div>
+    <div class="career-card rv"><div class="career-role">Community Outreach — Digital Literacy</div><div class="career-org">Nigerian Red Cross Society</div><div class="career-date">Jul 2022 – Oct 2023</div><div class="career-desc">Delivered digital literacy initiatives for underserved communities. Supported emergency response during the 2022 flooding crisis. Conducted usability testing to improve service delivery.</div></div>
+    <div class="career-card rv"><div class="career-role">Healthcare Assistant</div><div class="career-org">Nurseplus, Plymouth</div><div class="career-date">May 2017 – Dec 2018</div><div class="career-desc">Supported individuals across facilities in the Southwest of England, focusing on dementia care and managing young adults with challenging behaviours.</div></div>
+    <div class="career-card rv" style="border-color:rgba(110,231,183,.15);background:rgba(110,231,183,.02)"><div class="career-role" style="color:var(--accent)">Where I'm Heading</div><div class="career-org">Digital Transformation · AI Strategy · Consulting</div><div class="career-date">Target Trajectory</div><div class="career-desc">Tier 1: NHS Digital, IT Project Management. Tier 2: Public sector consultancies (TPXimpact, FutureGov, PUBLIC). Long-term: AI policy advisory and development finance institutions.</div></div>
+  </div>
+</section>
+
+<!-- CASE STUDY: ZINTER -->
+<section class="section container">
+  <div class="rv"><div class="slbl">04 / Case Study</div><h2 class="stitle">Zinter — Platform Transformation & AI-Driven Migration</h2><p class="sdesc">Led a structural architectural overhaul for a European logistics start-up, replacing legacy systems with scalable cloud-native infrastructure and integrated AI Computer Vision Agents.</p></div>
+  <div class="timeline">
+    <div class="ti"><div class="td"></div><div class="tph">Phase 01 — Discovery</div><div class="tt">Requirements & Stakeholder Alignment</div><div class="tde">Translated operational and commercial requirements into user stories, technical specifications, system designs, and API integrations across frontend and backend services.</div></div>
+    <div class="ti"><div class="td"></div><div class="tph">Phase 02 — Architecture</div><div class="tt">Azure Infrastructure & AI Integration</div><div class="tde">Oversaw backend architecture supporting real-time KYC workflows, including Azure-based infrastructure, optimised data pipelines, and integration with external government registries for business entity validation.</div><div class="tr"><div class="trl">Stack</div><div class="bd">Azure VMs → API Gateway → AI Computer Vision → KYC Pipeline → React Dashboard</div></div></div>
+    <div class="ti"><div class="td"></div><div class="tph">Phase 03 — Delivery</div><div class="tt">Cross-Functional Team Coordination</div><div class="tde">Managed a 5-person team (2 frontend devs, backend dev, SRE, UX/UI designer) using agile methodologies and Jira. Championed AI-enabled process automation delivering measurable improvements.</div></div>
+    <div class="ti"><div class="td"></div><div class="tph">Phase 04 — Impact</div><div class="tt">Measurable Business Outcomes</div><div class="tde">Delivered quantifiable improvements with continued iteration based on user feedback and behavioural data.</div><div class="tr"><div class="trl">Results</div><div class="bd">70% retention improvement · 40% latency reduction</div></div></div>
+  </div>
+</section>
+
+<!-- CASE STUDY: FLOWCAST -->
+<section id="projects" class="section container">
+  <div class="rv"><div class="slbl">05 / Case Study</div><h2 class="stitle">FlowCast — NHS Patient Flow Prediction</h2><p class="sdesc">AI-powered system to predict patient flow bottlenecks before they cascade. Being built as Global Talent visa evidence.</p></div>
+  <div class="timeline">
+    <div class="ti"><div class="td"></div><div class="tph">Phase 01 — Discovery</div><div class="tt">Mapping the Problem Space</div><div class="tde">Identified that reactive patient flow management causes significant delays per bed decision. Mapped ward-level bottlenecks across UHBW sites, informed by direct frontline experience.</div></div>
+    <div class="ti"><div class="td"></div><div class="tph">Phase 02 — Architecture</div><div class="tt">Designing the ML Pipeline</div><div class="tde">Designed a time-series forecasting system using historical admission, discharge, and transfer data. Cloud-native architecture on AWS with real-time inference endpoints.</div><div class="tr"><div class="trl">Architecture</div><div class="bd">AWS SageMaker → Lambda → API Gateway → React + D3 Dashboard</div></div></div>
+    <div class="ti"><div class="td"></div><div class="tph">Phase 03 — Build</div><div class="tt">Model Training & Clinical Alignment</div><div class="tde">Training prediction models against anonymised patient flow data. Iterating with clinical stakeholders to calibrate alert thresholds aligned with ward decision-making rhythms.</div></div>
+    <div class="ti"><div class="td"></div><div class="tph">Phase 04 — Target</div><div class="tt">Global Talent Visa Evidence</div><div class="tde">Targeting deployment as part of Global Talent visa evidence portfolio demonstrating exceptional promise in digital health innovation.</div><div class="tr"><div class="trl">Target</div><div class="bd">DSIT / Tech Nation Exceptional Promise endorsement — October 2026</div></div></div>
+  </div>
+  <div class="rv" style="margin-top:80px"><div class="slbl">FlowCast System Architecture</div>
+    <div class="arch"><div class="arch-flow">
+      <div><div class="arch-node an-a">NHS PAS Data</div><div class="arch-lbl">Source</div></div><div class="arch-arr">→</div>
+      <div><div class="arch-node an-g">ETL Pipeline</div><div class="arch-lbl">AWS Lambda</div></div><div class="arch-arr">→</div>
+      <div><div class="arch-node an-p">ML Model</div><div class="arch-lbl">SageMaker</div></div><div class="arch-arr">→</div>
+      <div><div class="arch-node an-b">API Gateway</div><div class="arch-lbl">REST API</div></div><div class="arch-arr">→</div>
+      <div><div class="arch-node an-g">Dashboard</div><div class="arch-lbl">React + D3</div></div>
+    </div></div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section container">
+  <div class="rv"><div class="slbl">06 / Education</div><h2 class="stitle">Academic Foundation</h2><p class="sdesc">A deliberate progression — physical architecture to project management to information technology.</p></div>
+  <div class="edu-grid rv">
+    <div class="edu-card"><div class="edu-deg">MSc Information Technology (Merit)</div><div class="edu-inst">University of the West of England, Bristol</div><div class="edu-yr">2024</div><div class="edu-fo">Cybersecurity, Data Governance, Cloud Computing, IoT, Software PM, Digital Design & Development. Dissertation: Human error, staff training, and security breaches in healthcare systems.</div></div>
+    <div class="edu-card"><div class="edu-deg">BSc Project Management</div><div class="edu-inst">ESAE University, Benin</div><div class="edu-yr">2022</div><div class="edu-fo">Operations Research, Systems Engineering, Quality Control & Assurance, Technical Report Writing, Econometrics.</div></div>
+    <div class="edu-card"><div class="edu-deg">BA (Hons) Architectural Technology & Environment</div><div class="edu-inst">Plymouth University</div><div class="edu-yr">2018 · Stages 1 & 2</div><div class="edu-fo">Building Services Engineering, Contract Procedures, Systems Design. Started at age 16 with A-grade distinctions in Systems Design. Foundation for structural thinking.</div></div>
+  </div>
+</section>
+
+<!-- CREDENTIALS -->
+<section id="credentials" class="section container">
+  <div class="rv"><div class="slbl">07 / Credentials</div><h2 class="stitle">Certifications & Professional Development</h2><p class="sdesc">Actively building a credential stack that validates cross-domain capability. Tracked in real time.</p></div>
+  <div class="certs-grid rv">
+    <div class="cert"><div class="cert-icon bi g">☁</div><div><div class="cert-name">AWS Cloud Essentials</div><div class="cert-st st-done">✓ Completed</div></div></div>
+    <div class="cert"><div class="cert-icon bi b">☁</div><div><div class="cert-name">Microsoft Azure Fundamentals (AZ-900)</div><div class="cert-st st-done">✓ Completed</div></div></div>
+    <div class="cert"><div class="cert-icon bi a">☁</div><div><div class="cert-name">Oracle Cloud Associate</div><div class="cert-st st-done">✓ Completed</div></div></div>
+    <div class="cert"><div class="cert-icon bi p">◆</div><div><div class="cert-name">Microsoft AI Fundamentals</div><div class="cert-st st-done">✓ Completed</div></div></div>
+    <div class="cert"><div class="cert-icon bi g">◆</div><div><div class="cert-name">Transform Your Business with AI</div><div class="cert-st st-done">✓ Feb 2026</div></div></div>
+    <div class="cert"><div class="cert-icon bi b">◆</div><div><div class="cert-name">GitHub Responsible AI</div><div class="cert-st st-done">✓ Feb 2026</div></div></div>
+    <div class="cert"><div class="cert-icon bi p">◆</div><div><div class="cert-name">AI Concepts for Developers</div><div class="cert-st st-done">✓ Dec 2025</div></div></div>
+    <div class="cert"><div class="cert-icon bi a">◆</div><div><div class="cert-name">Drive Business Value with AI Solutions</div><div class="cert-st st-done">✓ Dec 2025</div></div></div>
+    <div class="cert"><div class="cert-icon bi r">⚕</div><div><div class="cert-name">NHS Clinical Safety (DCB 0129 & 0160)</div><div class="cert-st st-done">✓ Completed</div></div></div>
+    <div class="cert"><div class="cert-icon" style="background:rgba(251,191,36,.12);color:var(--amber)">▣</div><div><div class="cert-name">PRINCE2 Agile</div><div class="cert-st st-prog">◐ In Progress — UWE CPD</div></div></div>
+    <div class="cert"><div class="cert-icon" style="background:rgba(251,191,36,.12);color:var(--amber)">▣</div><div><div class="cert-name">BCS Foundation Certificate in Business Analysis</div><div class="cert-st st-prog">◐ In Progress</div></div></div>
+    <div class="cert"><div class="cert-icon" style="background:rgba(251,191,36,.12);color:var(--amber)">📊</div><div><div class="cert-name">Power BI</div><div class="cert-st st-prog">◐ In Progress</div></div></div>
+    <div class="cert"><div class="cert-icon bi p">▣</div><div><div class="cert-name">Siemens Mobility PM Simulation (Forage)</div><div class="cert-st st-done">✓ Aug 2025</div></div></div>
+  </div>
+
+  <!-- BCS BODY OF PROOF -->
+  <div class="rv" style="margin-top:80px"><div class="slbl">Body of Proof — BCS BA Portfolio</div><h3 class="stitle" style="font-size:clamp(1.6rem,3vw,2.5rem)">Guided Learning Case Studies</h3><p class="sdesc">Structured business analysis deliverables across three fictional case study sectors. Documents embedded below as they are completed.</p></div>
+  <div class="bop-grid">
+    <div class="bop-card rv">
+      <div class="bop-hd"><div class="bop-sector" style="color:var(--accent)">HealthTech</div><div class="bop-title">MediCore AI</div><div class="bop-desc">AI-powered healthcare platform case study. Strategic analysis, requirements engineering, and process modelling.</div></div>
+      <div class="bop-tech"><span class="tag">PESTLE</span><span class="tag">MOST</span><span class="tag">Stakeholder Analysis</span><span class="tag">Requirements Engineering</span><span class="tag">Process Modelling</span></div>
+      <div class="bop-ft"><button class="bop-act" onclick="toggleBOP(this)">▸ View Document</button><span class="bop-badge bop-pend">Uploading soon</span></div>
+      <div class="bop-viewer"><div class="bop-ph">PDF will be embedded here once uploaded to <code>/docs/medicore-ai.pdf</code></div></div>
+    </div>
+    <div class="bop-card rv">
+      <div class="bop-hd"><div class="bop-sector" style="color:var(--blue)">FinTech</div><div class="bop-title">NovaPay</div><div class="bop-desc">Digital payment platform case study. Business case development, financial modelling, and change management.</div></div>
+      <div class="bop-tech"><span class="tag">Business Case</span><span class="tag">Gap Analysis</span><span class="tag">MoSCoW</span><span class="tag">Benefits Mapping</span></div>
+      <div class="bop-ft"><button class="bop-act" onclick="toggleBOP(this)">▸ View Document</button><span class="bop-badge bop-pend">Uploading soon</span></div>
+      <div class="bop-viewer"><div class="bop-ph">PDF will be embedded here once uploaded to <code>/docs/novapay.pdf</code></div></div>
+    </div>
+    <div class="bop-card rv">
+      <div class="bop-hd"><div class="bop-sector" style="color:var(--purple)">Professional Services</div><div class="bop-title">Meridian Consulting</div><div class="bop-desc">Consultancy operations case study. Organisational analysis, service improvement, and delivery model redesign.</div></div>
+      <div class="bop-tech"><span class="tag">SWOT</span><span class="tag">RACI</span><span class="tag">As-Is / To-Be Mapping</span><span class="tag">User Stories</span></div>
+      <div class="bop-ft"><button class="bop-act" onclick="toggleBOP(this)">▸ View Document</button><span class="bop-badge bop-pend">Uploading soon</span></div>
+      <div class="bop-viewer"><div class="bop-ph">PDF will be embedded here once uploaded to <code>/docs/meridian-consulting.pdf</code></div></div>
+    </div>
+  </div>
+
+  <!-- PRINCE2 Agile -->
+  <div class="rv" style="margin-top:60px"><div class="slbl">PRINCE2 Agile — Coursework Evidence</div><p class="sdesc">PRINCE2 Agile evidence embedded here as modules are completed through UWE Bristol CPD.</p>
+    <div class="bop-card" style="max-width:500px">
+      <div class="bop-hd"><div class="bop-sector" style="color:var(--amber)">Project Management</div><div class="bop-title">PRINCE2 Agile Portfolio</div><div class="bop-desc">Module coursework, exam preparation evidence, and practitioner deliverables from UWE Bristol CPD programme.</div></div>
+      <div class="bop-ft"><button class="bop-act" onclick="toggleBOP(this)">▸ View Documents</button><span class="bop-badge bop-pend">In progress</span></div>
+      <div class="bop-viewer"><div class="bop-ph">PDFs embedded here as coursework is completed. Upload to <code>/docs/prince2-agile/</code></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PLAYGROUND -->
+<section class="section container">
+  <div class="rv"><div class="slbl">08 / Playground</div><h2 class="stitle">Live Projects & Experiments</h2><p class="sdesc">Side projects, proof-of-concepts, and AI experiments — because the best learning happens by building.</p></div>
+  <div class="pg-grid">
+    <div class="pg-card rv"><div class="pg-prev"><span class="pg-badge badge-wip">In Progress</span><div class="code-rain">const predict = async (data) => {
+  const model = await load('flowcast-v2');
+  return model.predict(data);
+};
+const stream = new EventSource('/api/flow');
+stream.onmessage = (e) => {
+  updateDashboard(JSON.parse(e.data));
+};
+const predict = async (data) => {
+  const model = await load('flowcast-v2');
+  return model.predict(data);
+};</div></div><div class="pg-con"><div class="pg-ti">FlowCast</div><div class="pg-de">NHS patient flow prediction engine. Real-time bed capacity forecasting using time-series ML. Global Talent visa evidence project.</div><div class="tags"><span class="tag">Python</span><span class="tag">AWS</span><span class="tag">React</span><span class="tag">ML</span></div></div></div>
+    <div class="pg-card rv"><div class="pg-prev" style="background:linear-gradient(135deg,var(--bg-elevated),rgba(167,139,250,.08))"><span class="pg-badge badge-demo">Portfolio</span><div style="font-family:'Instrument Serif',serif;font-size:2.5rem;color:var(--purple);opacity:.4">BA</div></div><div class="pg-con"><div class="pg-ti">BCS BA Body of Proof</div><div class="pg-de">Three fictional case studies — MediCore AI, NovaPay, Meridian Consulting — demonstrating structured business analysis.</div><div class="tags"><span class="tag">HealthTech</span><span class="tag">FinTech</span><span class="tag">Consulting</span></div></div></div>
+    <div class="pg-card rv"><div class="pg-prev" style="background:linear-gradient(135deg,var(--bg-elevated),rgba(251,191,36,.06))"><span class="pg-badge badge-demo">System</span><div style="font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--amber);opacity:.5;text-align:center">XAU/USD<br>BAYESIAN<br>ENGINE</div></div><div class="pg-con"><div class="pg-ti">Bayesian Trading System</div><div class="pg-de">Algorithmic trading engine for XAU/USD on MetaTrader 5 with Telegram integration for remote monitoring.</div><div class="tags"><span class="tag">MQL5</span><span class="tag">Bayesian</span><span class="tag">Telegram API</span></div></div></div>
+    <div class="pg-card rv"><div class="pg-prev" style="background:linear-gradient(135deg,var(--bg-elevated),rgba(251,113,133,.06))"><span class="pg-badge badge-demo">MSc Project</span><div style="font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--rose);opacity:.5;text-align:center">CYBER<br>THREAT<br>MONITOR</div></div><div class="pg-con"><div class="pg-ti">Cybersecurity Threat Monitoring App</div><div class="pg-de">Web application applying AI to cybersecurity threat monitoring. MSc research translated into a practical healthcare security tool.</div><div class="tags"><span class="tag">Python</span><span class="tag">Flask</span><span class="tag">AI</span><span class="tag">InfoSec</span></div></div></div>
+  </div>
+</section>
+
+<!-- WRITING -->
+<section id="writing" class="section container">
+  <div class="rv"><div class="slbl">09 / Insights & Strategy</div><h2 class="stitle">Technical Writing</h2><p class="sdesc">I write about AI strategy, systems thinking, and digital transformation on Substack and LinkedIn.</p></div>
+  <div class="writing-grid rv">
+    <div class="wc"><div class="wplat">Substack</div><div class="wti">Africa's AI Strategy Requires Capital Discipline, Not Symbolism</div><div class="wex">Why Africa should own the data governance layer rather than replicate frontier models — and how Google's WAXAL validates the thesis.</div><a href="https://substack.com/@emmanuelchiefson" class="wlink" target="_blank" rel="noopener">Read on Substack →</a></div>
+    <div class="wc"><div class="wplat">Substack</div><div class="wti">NHS Workforce Attrition: What the Numbers Actually Say</div><div class="wex">Evidence-based analysis of NHS retention challenges, grounded in frontline operational experience.</div><a href="https://substack.com/@emmanuelchiefson" class="wlink" target="_blank" rel="noopener">Read on Substack →</a></div>
+    <div class="wc"><div class="wplat">Substack</div><div class="wti">£63 and a Business Failure: What I Learned</div><div class="wex">A transparent post-mortem on a failed venture — what went wrong, what I'd do differently, and why honest failure analysis matters.</div><a href="https://substack.com/@emmanuelchiefson" class="wlink" target="_blank" rel="noopener">Read on Substack →</a></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="contact" class="cta container">
+  <div class="rv"><div class="slbl">10 / Connect</div><h2 class="cta-title">Let's Build Something<br><span style="color:var(--accent)">That Matters.</span></h2><p class="cta-desc">Open to roles in AI strategy, digital transformation, cloud architecture, and NHS innovation. UK-based. Skilled Worker visa sponsorship available.</p>
+    <div class="cta-btns"><a href="mailto:emmanuelchiefson@gmail.com" class="btn-p">Get in Touch</a><a href="#" class="btn-s">Download Resume</a></div>
+    <div class="social"><a href="https://www.linkedin.com/in/emmanuelchiefson/" target="_blank" rel="noopener">LinkedIn</a><a href="https://github.com/emmanuelchiefson" target="_blank" rel="noopener">GitHub</a><a href="https://substack.com/@emmanuelchiefson" target="_blank" rel="noopener">Substack</a></div>
+  </div>
+</section>
+
+<footer><div class="container">© 2026 Emmanuel Chiefson. Designed with intentionality.</div></footer>
+
+<!-- CHAT -->
+<button class="chat-toggle" onclick="toggleChat()" aria-label="Ask me anything">💬</button>
+<div class="chat-panel" id="cp">
+  <div class="chat-hd"><div class="chat-dot"></div><div><div class="chat-ht">Ask About My Experience</div><div class="chat-hs">AI-powered assistant</div></div></div>
+  <div class="chat-msgs" id="cm"><div class="chat-msg bot">Hi! I can answer questions about Emmanuel's skills, projects, certifications, and career. What would you like to know?</div></div>
+  <div class="chat-sug" id="cs">
+    <button onclick="askQ('Core skills?')">Core skills</button>
+    <button onclick="askQ('Tell me about Zinter')">Zinter</button>
+    <button onclick="askQ('Certifications?')">Certifications</button>
+    <button onclick="askQ('What is FlowCast?')">FlowCast</button>
+    <button onclick="askQ('NHS experience?')">NHS</button>
+    <button onclick="askQ('Education?')">Education</button>
+  </div>
+  <div class="chat-ir"><input class="chat-in" id="ci" placeholder="Ask anything..." onkeydown="if(event.key==='Enter')sendC()"><button class="chat-send" onclick="sendC()">↑</button></div>
+</div>
+
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv,.ti').forEach(el=>obs.observe(el));
+function toggleChat(){document.getElementById('cp').classList.toggle('open')}
+const R={skills:"Emmanuel's core capabilities: AI Strategy (LLM integration, predictive models, Computer Vision, AI governance), Cloud Architecture (AWS, Azure & Oracle certified, Terraform, Docker), Digital Transformation & PM (PRINCE2 Agile in progress, BCS BA, Agile/Scrum, ITIL, Jira). π-shaped — deep in multiple verticals, wide in cross-domain application.",zinter:"Zinter is a European logistics start-up where Emmanuel serves as IT Project Lead at Bayside Consult. He led a full platform transformation — replacing legacy systems with Azure cloud-native infrastructure and AI Computer Vision Agents. Managed a 5-person team (2 frontend devs, backend dev, SRE, UX/UI designer). Results: 70% retention improvement, 40% latency reduction. Includes real-time KYC workflows and Dutch Chamber of Commerce registry integration.",flowcast:"FlowCast is an AI-powered NHS patient flow prediction tool. Uses time-series ML models on AWS (SageMaker, Lambda, API Gateway) with React + D3 dashboard. Being built as Global Talent visa evidence — targeting DSIT/Tech Nation Exceptional Promise endorsement by October 2026.",certs:"Degrees: MSc IT (Merit, UWE), BSc Project Management (ESAE), BA Architectural Technology (Plymouth). Cloud: AWS, Azure AZ-900, Oracle. AI: Microsoft AI Fundamentals + 6 Microsoft Learn trophies. Clinical: NHS DCB 0129 & 0160. In progress: PRINCE2 Agile (UWE CPD), BCS BA Foundation, Power BI. Completed Siemens Mobility PM Simulation (Forage, Aug 2025).",nhs:"Band 3 Patient Flow Co-ordinator at UHBW Bristol (Southmead Hospital) since 2019. Central interface between ward teams and senior leads. Started in healthcare 2017 as Healthcare Assistant at Nurseplus, Plymouth — dementia care and complex needs. Deliberately maintains frontline NHS roles to ground technical expertise in operational reality.",education:"MSc IT (Merit) — UWE Bristol 2024. Cybersecurity, Cloud, Data Governance, IoT. Dissertation on human error in healthcare. BSc Project Management — ESAE University, Benin 2022. BA Architectural Technology — Plymouth University 2018 (Stages 1&2, started age 16, A-grade Systems Design).",default:"Emmanuel is a π-shaped strategist bridging healthcare operations, cloud architecture, and AI digital transformation. Patient Flow Co-ordinator at UHBW Bristol + IT Project Lead at Bayside Consult (Zinter platform). Building FlowCast for Global Talent visa. Ask about skills, projects, certs, or career!"};
+function askQ(q){const m=document.getElementById('cm'),s=document.getElementById('cs');s.style.display='none';m.innerHTML+=`<div class="chat-msg user">${q}</div>`;const k=q.toLowerCase();let r=R.default;if(k.includes('skill')||k.includes('core')||k.includes('capabil'))r=R.skills;else if(k.includes('zinter')||k.includes('bayside')||k.includes('logistics'))r=R.zinter;else if(k.includes('flowcast')||k.includes('predict'))r=R.flowcast;else if(k.includes('cert')||k.includes('qualif')||k.includes('prince')||k.includes('bcs'))r=R.certs;else if(k.includes('nhs')||k.includes('health')||k.includes('hospital'))r=R.nhs;else if(k.includes('educ')||k.includes('degree')||k.includes('msc')||k.includes('uni'))r=R.education;setTimeout(()=>{m.innerHTML+=`<div class="chat-msg bot">${r}</div>`;m.scrollTop=m.scrollHeight},500)}
+function sendC(){const i=document.getElementById('ci');if(!i.value.trim())return;askQ(i.value.trim());i.value=''}
+function toggleBOP(btn){const v=btn.closest('.bop-card').querySelector('.bop-viewer');v.classList.toggle('open');btn.textContent=v.classList.contains('open')?'▾ Hide Document':'▸ View Document'}
+document.querySelectorAll('.kw').forEach(w=>{w.addEventListener('mousemove',e=>{const r=w.getBoundingClientRect();const x=(e.clientX-r.left-r.width/2)/r.width*4;const y=(e.clientY-r.top-r.height/2)/r.height*4;w.style.transform=`translate(${x}px,${y-4}px) rotate(${x*.3}deg)`});w.addEventListener('mouseleave',()=>{w.style.transform=''})});
+</script>
+</body>
+</html>
