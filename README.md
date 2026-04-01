@@ -2,7 +2,7 @@
 
 Personal portfolio site for Emmanuel Chiefson — Technical Project & Platform Transformation Lead.
 
-**Live site:** [your-project-name.vercel.app](https://your-project-name.vercel.app)
+**Live site:** [your-project-name.vercel.app]([https://your-project-name.vercel.app](https://emmanuel-chiefson-portfolio.vercel.app/))
 
 ---
 
